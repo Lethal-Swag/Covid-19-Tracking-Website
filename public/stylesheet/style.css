@@ -1,0 +1,144 @@
+.start{
+    position: absolute;
+    background-color: #E73C49;
+  }
+  marquee{
+    background-color:lightpink;
+    
+    width:100%;
+    height:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+  .todo-wrapper {
+      margin: 50px 300px 10px 400px;
+      background-color:rgb(179, 118, 118);
+      border-radius: 35px;
+      padding: 30px;
+      font-weight: 400;
+  }
+  
+  .todo-wrapper h2 {
+      margin: 0;
+      text-align: center;
+  }
+  
+  li > button {
+      font-weight: normal;
+      background: pink;
+      border: none;
+      float: right;
+      color: #025f70;
+  }
+  li{
+    border-color: black;
+    background-color: cadetblue;
+    padding: 3px 5px;
+    border-radius: 30px;
+    text-align: left;
+    margin: 2px 200px 2px 0px;
+  }
+  .todo-wrapper p {
+      font-style: italic;
+      color: rgba(11, 10, 12, 0.692);
+      margin: 5px 0;
+      
+  }
+  
+  .todo-wrapper ol {
+      margin: 20px 0;
+  }
+  
+  .todo-wrapper .completed {
+      text-decoration: line-through;
+      color:black;
+  }
+  
+  .todo-wrapper .pretty-button {
+      margin: 10px 20px;
+      padding: 5px 20px;
+      border-radius: 15px;
+      background-color: #0093D5;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-size: small;
+      opacity: 0.8;
+      display: inline-block;
+  }
+  
+  .todo-wrapper .pretty-button:hover{
+    cursor: pointer;
+    opacity: 10;
+  }
+  
+  .todo-wrapper input {
+      padding: 3px 6px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+    
+    .close:hover {
+      background-color: #f44336;
+      color: white;
+    }
+  
+  
+  #control-wrapper {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .remove{
+    display: none;
+  }
+  
+  
+  
+  
+  .todo-wrapper #add-button {
+    background-color:yellowgreen;
+    display: inline;
+    display:inline-flex;
+    
+  }
+  .todo-wrapper  #clear-completed-button{
+    background-color: peru;
+  }
+  .todo-wrapper #save-button {
+    background-color:rgb(53, 105, 126);
+    
+  }
+  .todo-wrapper form{
+    display: inline-block;
+  }
+  
+  
+  .todo-wrapper input {
+    width: 400px;
+    display:inline-flex;
+    }
+  
+  .round{
+    text-align: left;
+    position: relative;
+    margin-left: 0 px;
+  }
+  
+  ul{
+      list-style-type: none;
+      text-align: center;
+      background-color: #0093D5;
+      margin: 2px 100px 2px 100px;
+      border-radius: 10px;
+  }
+  

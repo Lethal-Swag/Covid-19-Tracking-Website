@@ -1,0 +1,259 @@
+
+*{
+    scroll-behavior: smooth;
+  }
+
+  #head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    transition-property: background;
+    transition-duration: 2s;
+  }
+
+  #head.active {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: red;
+    width: 100%;
+    padding: 1.4em;
+    left: 0;
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+    background-color: black;
+    opacity: 0.5;
+    transition-property: background;
+    transition-duration: 2s;
+
+  }
+
+  #cont{
+    scroll-behavior: smooth;
+    background-image: url('../public/images/heropage.jpg');
+    background-repeat: no-repeat;
+  }
+  #coronaSection{
+    background-image: url('../public/images/desktop.jpg');
+    opacity : 0.9; 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    filter: blur(0.1px);
+  } 
+  #img1{
+    background-image: url('../public/images/googly.jpg');
+    background-repeat:round; 
+    background-size: 100% 100%; 
+    opacity: 0.9;
+  }
+
+  #search1 {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+#box1{
+  position: relative;
+  left: -500px;
+  
+}
+
+#box1.active{
+  animation-name: box1move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box1move{
+  from{
+left:-500px;
+  }
+  to{
+    left:0px;
+  }
+}
+
+
+/* box2 animations */
+#box2{
+  position: relative;
+  top: -2000px;
+}
+
+#box2.active{
+  animation-name: box2move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box2move{
+  from{
+top:-900px;
+  }
+  to{
+    top:0px;
+  }
+}
+
+/* box3 animation */
+#box3{
+  position: relative;
+  right: -500px;
+}
+
+#box3.active{
+  animation-name: box3move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box3move{
+  from{
+right: -500px;
+  }
+  to{
+    right: 0px;
+  }
+}
+
+/* box4 animation */
+
+#box4{
+  position: relative;
+  left: -500px;
+}
+
+#box4.active{
+  animation-name: box4move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box4move{
+  from{
+left:-500px;
+  }
+  to{
+    left:0px;
+  }
+}
+
+/* box5 animation */
+
+#box5{
+  position: relative;
+  bottom: -2000px;
+}
+
+#box5.active{
+  animation-name: box5move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box5move{
+  from{
+bottom:-2000px;
+  }
+  to{
+    bottom:0px;
+  }
+}
+
+/* box6 animation */
+#box6{
+  position: relative;
+  right: -500px;
+}
+
+#box6.active{
+  animation-name: box6move;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes box6move{
+  from{
+right: -500px;
+  }
+  to{
+    right: 0px;
+  }
+}
+
+/* profile animate */
+#Rohit{
+        animation-name: Rohitzoom;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+        animation-duration: 2s;
+}
+#Rohit:hover{
+  transform: scale(3);
+  animation-play-state: paused; 
+}
+
+@keyframes Rohitzoom {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+#Googly{
+  animation-name: Googlyzoom;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  animation-duration: 2s;
+}
+
+#Googly:hover{
+  transform: scale(3);
+  animation-play-state: paused;
+}
+
+@keyframes Googlyzoom {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: .5;
+}
+}
+
+#slide1 {
+  position: relative;
+  background-image: url('./public/images/slide1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#slide2 {
+  position: relative;
+  background-image: url('./public/images/slide2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#slide3 {
+  position: relative;
+  background-image: url('./public/images/slide3.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#newbtn{
+  background-image: url('./public/images/shine.gif');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  }
+  

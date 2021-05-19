@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../public/stylesheet.css" type="text/css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!--Header Section-->
+
+
+  <!--Hero Section -->
+
+  <section id="cont" class="text-white bg-white">
+
+    <div id="head" class="shadow-lg p-2 fixed w-full z-10 flex flex-wrap p-5 flex-col border-b pb-50 border-gray-200 md:flex-row items-left sm\:flex-row sm:items-left">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto" id="item">
+
+
+        <a class="mr-5 hover:text-gray-400 font-bold" href="#cont">Home</a>
+        <a class="mr-5 hover:text-gray-400 font-bold" href="#team">Team</a>
+
+      </nav>
+      <a class="flex overscroll-x-auto z-50 w-full px-5 py-0 order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0">
+
+        <span class="ml-3 text-xl xl:block lg:hidden sm:items-center">Covid-19 Tracker</span>
+      </a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      </div>
+    </div>
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class=" lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Global situation
+          <br class="hidden lg:inline-block">cause coronavirus
+        </h1>
+        <p class="mb-8 leading-relaxed font-bold">Most people infected with the COVID-19 virus will experience mild to   moderate
+          <span class="text-gray-900">respiratory illness</span> and recover without requiring special treatment. Older   people, and those with
+          <span class="text-gray-900">underlying medical</span> problems like cardiovascular disease, diabetes, chronic   respiratory disease,
+          <span class="text-gray-900">and cancer are more</span> likely to develop serious illness.
+        </p>
+
+      </div>
+      <div class="object-cover object-center rounded " id="piechart_3d">
+
+        <!-- <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Corona section -->
+
+  <section class="text-white body-font " id="coronaSection">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 transform hover:font-bold hover:-translate-y-1 hover:scale-110 ..." style="text-shadow: 1px 1px 0px #030303;">Top countries that have the highest coronavirus rates</h1>
+        <p class="lg:w-1/2 w-full leading-relaxed text-lg font-bold text-gray-900" style="text-shadow: 0.1px 0.1px 0px #030303;"> Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+
+        <!-- Blocks area -->
+
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="box1">
+          <div class="border border-gray-300 p-6  text-gray-900 transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ..." id="box1in">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">United States</h2>
+            <div class="text-left  md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NC"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TC"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none;; opacity: 0." 8; id="ND"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR"></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="box2">
+          <div class="border border-gray-300 p-6 transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-2">India</h2>
+            <div class="text-left md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NC1"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TC1"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="ND1"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD1"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR1"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR1"></p>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="box3">
+          <div class="border border-gray-300 p-6 text-gray-900 transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Brazil</h2>
+            <div class="text-left md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="ont-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NC2"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TC2"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="ND2"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD2"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR2"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR2"></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="box4">
+          <div class="border border-gray-300 p-6  transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-white font-medium title-font mb-2">Russia</h2>
+            <div class="text-left md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NC3"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TC3"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="ND3"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD3"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="bfont-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR3"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR3"></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="box5">
+          <div class="border border-gray-300 p-6  transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-white font-medium title-font mb-2">France</h2>
+            <div class="text-left md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold  ..." style="background-color: none; opacity: 0.8;" id="NC4"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold  ..." style="background-color: none; opacity: 0.8;" id="TC4"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="ND4"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD4"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR4"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class=" font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR4"></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="xl:w-1/3 md:w-1/2  p-4 shadow-lg" id="box6">
+          <div class="border border-gray-300 p-6 shadow-lg transform duration-150 ease-in-out hover:text-9xl hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            <div   class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"     class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h2 class="text-lg text-white font-medium title-font mb-2 ">Italy</h2>
+            <div class="text-left md:text-center ...">
+
+              <p class="text-left md:text-center font-bold ...">New Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NC5"></p>
+              <p class="text-left md:text-center font-bold ...">Total Confirmed</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TC5"></p>
+              <p class="text-left md:text-center font-bold ...">New Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="ND5"></p>
+              <p class="text-left md:text-center font-bold ...">Total Deaths</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TD5"></p>
+              <p class="text-left md:text-center font-bold ...">New Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="NR5"></p>
+              <p class="text-left md:text-center font-bold ...">Total Recovered</p>
+              <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..." style="background-color: none; opacity: 0.8;" id="TR5"></p>
+            </div>
+          </div>
+        </div>
+
+  </section>
+  //- Feedback area
+  <header class="text-gray-600 body-font bg-gray-800" id="ReviewSection">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <button class="p-2 bg-black items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" id="newbtn" role="alert" onclick="toggle_visibility()" style="outline: none; background-image: url('./public/images/shine.gif'); background-repeat: no-repeat; background-size: 100%;">
+          <span class="flex rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+          <span class="font-semibold mr-2 text-left text-yellow-500 flex-auto">Share Your Reviews</span>
+          <svg class="fill-current text-yellow-500 opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg""  viewBox=" 0 0 20 20">
+            <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+          </svg>
+    </div>
+
+    </nav>
+
+    </div>
+  </header>
+  <!-- input values -->
+  <form action="/" method="post">
+  <div class="slideshow-container">
+    <div id="feedback-main" style="display: none;">
+      <div id="feedback-div">
+        <form class="form mt-4 ml-4" id="feedback-form1" name="form1" enctype="multipart/form-data">
+
+          <div class="relative flex w-60 flex-wrap items-stretch mb-3 flex content-center">
+            <input type="text" placeholder="Enter Name" id="InputName" name="InputName" class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10 " />
+            <span   class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+
+          <div class="relative flex w-60 flex-wrap items-stretch mb-3">
+            <input type="text" placeholder="Senior profile" id="InputProfile" name="InputProfile"  class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10" />
+            <span   class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="far fa-id-badge"></i>
+            </span>
+          </div>
+
+          <div class="relative flex w-2/5  flex-wrap items-stretch mb-3 ">
+            <textarea type="text" placeholder="Please Review Us" id="InputReview" name="InputReview"  class="px-3 py-3 h-48 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10"></textarea>
+            <span   class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="far fa-file-alt"></i>
+            </span>
+          </div>
+
+          <div class="feedback-submit">
+
+            <button class="bg-black hover:bg-yellow-200 text-yellow-500 font-bold py-2 px-4 rounded mb-4" id="enterBtn"   onclick="saveData()">   Enter
+            </button>
+            <div class="feedback-ease"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!--- Sliders -->
+  
+  <div class="mySlides">
+
+    <section class="body-font " id="slide1" style="position: relative; background-image: url('./public/images/slide1.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+      <div class="container px-5 py-24 mx-auto  ">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center "><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class=" inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+            <path   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+            </path></svg>
+
+<p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview"></p><span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6 "></span>
+
+          <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName"></h2>
+         
+            <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName1"></h2>
+            <p>
+            <%=record[record.length-1].iName %>
+            </p>
+              
+          <p class="text-yellow-300" id="ShowProfile"></p>
+</div>
+      </div>
+</section>
+
+  </div>
+
+  <div class="mySlides">
+
+    <section class=" body-font " id="slide2" style="position: relative; background-image: url('./public/images/slide2.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+            <path   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+            </path></svg>
+  <p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview1"></p><span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6"></span>
+ 
+ 
+   
+  <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName1"></h2>
+  <p>
+    <%=record[record.length-2].iName %>
+  </p>
+  
+
+<p class="text-yellow-300" id="ShowProfile1"></p>
+        </div>
+</div>
+    </section>
+
+</div>
+
+  <div class="mySlides">
+
+    <section class="text-yellow-500 body-font bg-gray-400" id="slide3" style="position: relative; background-image: url('./public/images/slide3.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+            <path   d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+            </path>
+          </svg>
+          <p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview2"></p>
+          <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6"></span>
+          <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName2"></h2>
+            <p>
+                <%=record[record.length-3].iName %>
+            </p>
+          <p class="text-yellow-300" id="ShowProfile2"></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  </div>
+  </form>
+  <!-- Corona search -->
+
+  <section class="text-gray-700 body-font bg-white" id="search1">
+    <div class="container flex flex-wrap px-5 py-24 mx-auto items-center">
+      <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-300">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-red-400">What's Your Country Score!</h1>
+        <!-- <p class="leading-relaxed text-base">First lettter must be capital</p> -->
+
+        <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ...">
+          <div class="relative sm:mr-4 mb-4 sm:mb-0 flex-grow w-full ">
+
+            <input type="text" id="fullname" name="full-name"     class="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ">
+          </div>
+
+          <button   class="text-white bg-indigo-500 border-0 py-2 px-8 bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 transition delay-150 duration-300 ease-in-out ..."   id="search" type="text" onclick="Search()">Search</button>
+        </div>
+      </div>
+      <div class="flex flex-col md:w-1/2 md:pl-12">
+        <h2 class="title-font font-medium text-gray-800 tracking-widest text-sm mb-3">RESULT</h2>
+        <!--Alert box-->
+        <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500" id="error">
+          <span class="text-xl inline-block mr-5 align-middle">
+            <i class="fas fa-bell">
+          </span>
+          <span class="inline-block align-middle mr-8">
+            <b class="capitalize">SEE!</b> your first letter must be capital OR check spelling!
+          </span>
+          <button id="cross" class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none">
+            <span>×</span>
+          </button>
+        </div>
+        <!--Alert end -->
+        <div class="border border-gray-300 p-6 text-center shadow-lg">
+          <div class=" text-center">
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-2 " id="h2">Country Name</h2>
+            <div class="text-left md:text-center ... ">
+
+              <p class="text-left md:text-center ...">New Confirmed</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="NC6"></p>
+              <p class="text-left md:text-center ...">Total Confirmed</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="TC6"></p>
+              <p class="text-left md:text-center ...">New Deaths</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="ND6"></p>
+              <p class="text-left md:text-center ...">Total Deaths</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="TD6"></p>
+              <p class="text-left md:text-center ...">New Recovered</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="NR6"></p>
+              <p class="text-left md:text-center ...">Total Recovered</p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none;" id="TR6"></p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Us-->
+  <section class="text-gray-700 body-font " id="team" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); background-repeat:round; background-size: 100% 100%; opacity: 0.9;">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white text-center pt-16 ...">Team</h1>
+    <div class="container px-5 py-24 mx-auto">
+      <div class=" flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col transition  ease-in-out duration-700">
+        <img   class=" sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full  flex-shrink-0 transition  ..."   id="Googly" src="../public/images/googly.jpg">
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 ">
+
+          <h2 class="text-white text-lg title-font font-medium mb-2 text-shadow-sm"     style="text-shadow: 2px 2px 0px #181717;">Manpreet Singh</h2>
+          <span class="text-white text-sm" style="text-shadow: 2px 2px 0px #181717;">UI/UX DEVELOPER</span>
+          <p class="leading-relaxed text-base text-white">Here,I style myself around hardwork and growth. I designed     this website for general purpose.</p>
+
+        </div>
+      </div>
+
+      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col ">
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+
+
+          <h2 class="text-white text-lg title-font font-medium mb-2 text-shadow-sm"   style="text-shadow: 2px 2px 0px #181717;">Rohit Sharma</h2>
+          <span class="text-white text-sm" style="text-shadow: 2px 2px 0px #181717;">TEAM MEMBERno</span>
+          <p class="leading-relaxed text-base text-white">asdadadasdads</p>
+
+        </div>
+        <img class="ease duration-300 sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full flex-shrink-0" id="Rohit" src="../public/images/rohit.jpg">
+      </div>
+
+      <!--footer-->
+      <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <span class="ml-3 text-xl">Covid-19 tracker</span>
+          </a>
+          <p class="text-sm font-bold  text-gray-900 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> © 2020 Covid-19
+
+          </p>
+          <span id="f" class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start ">
+            <a href="https://www.facebook.com/LethalSwag123/" class="text-white transform ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+<p>&nbsp</p>
+<a href="https://twitter.com/swag-lethal" class="text-white transform ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"   viewBox="0 0 24 24">
+    <path     d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+    </path>
+  </svg>
+            </a>
+            <p>&nbsp</p>
+            <p>&nbsp</p>
+            <a href="https://instagram/lethal_swag" class="text-white transform  ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"   class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <p>&nbsp</p>
+            <p>&nbsp</p>
+            <a href="https://www.linkedin.com/in/lethal-swag/" class="text-white transform ease-in-out duration-150 hover:text-red-500 hover:text-s hover:-translate-y-1 hover:scale-110 ...">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"   stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none"     d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a></span>
+</div>
+      </footer>
+</section>
+  <!--End About Us-->
+
+  <!-- footer -->
+
+  <!--ending div -->
+  </div>
+  </div>
+  </div>
+  </section>
+</body>
+</body>
+<!-- Scripting side -->
+
+<script type="text/javascript" src="../public/javascript.js"></script>
+
+
+</html>
